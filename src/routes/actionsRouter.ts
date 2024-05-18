@@ -1,13 +1,14 @@
 import { Router } from 'express';
-import lessonController from '../controllers/lessonController.ts';
+import todosController from '../controllers/todosController.ts';
 
 const router = Router();
 
 
-router.get('/getAll', lessonController.getAll);
-router.get('/get', lessonController.getById);
-router.delete('/delete', lessonController.deleteById);
-router.post('/create', lessonController.createTodo);
+router.get('/getAll', todosController.getAll);
+router.get('/get', todosController.getById);
+router.delete('/delete', todosController.deleteById);
+router.post('/create', todosController.createTodo);
+router.put('/update', todosController.updateTodo);
 
 
 
